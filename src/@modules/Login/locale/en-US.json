@@ -1,0 +1,9 @@
+{
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "loginFailed": "Login Failed",
+  "unauthorized": "Email or Password did not match our records",
+  "loginSuccess": "Login Success",
+  "loginPending": "Login Pending"
+}

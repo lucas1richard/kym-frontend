@@ -1,0 +1,30 @@
+{
+  "groups": [
+    { "groupid": "100", "description": "Dairy and Egg Products" },
+    { "groupid": "200", "description": "Spices and Herbs" },
+    { "groupid": "300", "description": "Baby Foods" },
+    { "groupid": "400", "description": "Fats and Oils" },
+    { "groupid": "500", "description": "Poultry Products" },
+    { "groupid": "600", "description": "Soups, Sauces, and Gravies" },
+    { "groupid": "700", "description": "Sausages and Luncheon Meats" },
+    { "groupid": "800", "description": "Breakfast Cereals" },
+    { "groupid": "900", "description": "Fruits and Fruit Juices" },
+    { "groupid": "1000", "description": "Pork Products" },
+    { "groupid": "1100", "description": "Vegetables and Vegetable Products" },
+    { "groupid": "1200", "description": "Nut and Seed Products" },
+    { "groupid": "1300", "description": "Beef Products" },
+    { "groupid": "1400", "description": "Beverages" },
+    { "groupid": "1500", "description": "Finfish and Shellfish Products" },
+    { "groupid": "1600", "description": "Legumes and Legume Products" },
+    { "groupid": "1700", "description": "Lamb, Veal, and Game Products" },
+    { "groupid": "1800", "description": "Baked Products" },
+    { "groupid": "1900", "description": "Sweets" },
+    { "groupid": "2000", "description": "Cereal Grains and Pasta" },
+    { "groupid": "2100", "description": "Fast Foods" },
+    { "groupid": "2200", "description": "Meals, Entrees, and Side Dishes" },
+    { "groupid": "2500", "description": "Snacks" },
+    { "groupid": "3500", "description": "American Indian\/Alaska Native Foods" },
+    { "groupid": "3600", "description": "Restaurant Foods" },
+    { "groupid": "3700", "description": "Supplements" }
+  ]
+}

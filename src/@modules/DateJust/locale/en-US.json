@@ -1,0 +1,20 @@
+{
+  "January": "January",
+  "February": "February",
+  "March": "March",
+  "April": "April",
+  "May": "May",
+  "June": "June",
+  "July": "July",
+  "August": "August",
+  "September": "September",
+  "October": "October",
+  "November": "November",
+  "December": "December",
+  "goBackOneDay": "Go back one day to {newDate}",
+  "goForwardOneDay": "Go forward one day to {newDate}",
+  "applicationDate": "Application Date",
+  "month": "Month",
+  "year": "Year",
+  "date": "Date"
+}

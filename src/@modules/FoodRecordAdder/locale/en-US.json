@@ -1,0 +1,20 @@
+{
+  "foodRecordAdder": "Food Record Adder",
+  "submit": "Submit",
+  "previous": "Previous",
+  "next": "Next",
+  "whatDidYouEat": "Step 1: What did you eat?",
+  "whenDidYouEat": "Step 2: When did you eat?",
+  "howMuchDidYouEat": "Step 3: How much did you eat?",
+  "meal": "Meal",
+  "breakfast": "Breakfast",
+  "morningSnack": "Morning Snack",
+  "lunch": "Lunch",
+  "afternoonSnack": "Afternoon Snack",
+  "dinner": "Dinner",
+  "eveningSnack": "Evening Snack",
+  "noResults": "Your search had no results",
+  "measurement": "Measurement",
+  "chooseAFood": "Choose a food",
+  "recordAdded": "Record added"
+}
