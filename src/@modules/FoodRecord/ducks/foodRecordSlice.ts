@@ -29,6 +29,14 @@ export const foodRecordSlice = createSlice({
         loadStatus: 'succeeded',
       };
     },
+    setRecordDateLoading: (state, action: PayloadAction<{ date: string }>) => {
+      const { payload } = action;
+      const { date } = payload;
+      state.record[date] = {
+        ...state.record[date],
+        loadStatus: 'pending',
+      };
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchFoodRecordsThunk.fulfilled, (state, action) => {
@@ -39,9 +47,17 @@ export const foodRecordSlice = createSlice({
         loadStatus: 'succeeded',
       };
     });
+    builder.addCase(fetchFoodRecordsThunk.pending, (state, action) => {
+      const { meta: { arg } } = action;
+      const { date } = arg;
+      state.record[date] = {
+        ...state.record[date],
+        loadStatus: 'pending',
+      };
+    });
   },
 });
 
-export const { setRecordDate } = foodRecordSlice.actions;
+export const { setRecordDate, setRecordDateLoading } = foodRecordSlice.actions;
 
 export default foodRecordSlice;

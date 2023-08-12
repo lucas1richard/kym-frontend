@@ -1,4 +1,5 @@
 import type { RootState } from '@ducks/store';
+import { FoodRecord } from '@typedefs';
 import { createSelector } from 'reselect';
 import foodRecordSlice, { FoodRecordState } from './foodRecordSlice';
 
@@ -8,7 +9,6 @@ export const getFoodRecordState = createSelector(
   [(state: StateWithFoodRecord) => state.foodRecord],
   (foodRecord) => foodRecord || foodRecordSlice.getInitialState()
 );
-
 
 export const selectFoodRecordDate = createSelector(
   [
@@ -39,3 +39,5 @@ export const selectFoodRecordLoadStatus = createSelector(
     return state.record?.[date]?.loadStatus ?? 'idle';
   }
 );
+
+export const selectMeal = (recordItem: FoodRecord<{ withMacros: true }>) => recordItem?.meal;

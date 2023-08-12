@@ -4,7 +4,7 @@ import { setLoginStatus } from '@ducks/configSlice';
 import kymFetch from '@libs/kym-fetch';
 import fetchTrainingDaysThunk from '@ducks/dayType/thunks/fetchTrainingDays';
 import signinWithTokenThunk from './signinWithTokenThunk';
-import fetchFoodRecordsThunk from '@modules/FoodRecord/ducks/thunks/fetchFoodRecordsThunk';
+// import fetchFoodRecordsThunk from '@modules/FoodRecord/ducks/thunks/fetchFoodRecordsThunk';
 
 type ExchangTokenThunkAction = ThunkAction<Promise<void>, RootState, void, any>;
 

@@ -44,25 +44,19 @@ const FoodRecordAdder = () => {
       <Typography intlId="foodRecordAdder" variant="h4" component="h2" />
       <Tabs>
         <TabTitle>
-          <Typography color="inherit" align="center">
-            Step 1: What did you eat?
-          </Typography>
+          <Typography intlId="whatDidYouEat" color="inherit" align="center" />
         </TabTitle>
         <TabContent>
           <ChooseAbbrev />
         </TabContent>
         <TabTitle>
-          <Typography color="inherit" align="center">
-            Step 2: When did you eat?
-          </Typography>
+          <Typography intlId="whenDidYouEat" color="inherit" align="center" />
         </TabTitle>
         <TabContent>
           <ChooseMeal />
         </TabContent>
         <TabTitle>
-          <Typography color="inherit" align="center">
-            Step 3: How much did you eat?
-          </Typography>
+          <Typography intlId="howMuchDidYouEat" color="inherit" align="center" />
         </TabTitle>
         <TabContent>
           <ChooseQuantity abbrevId={chosenAbbrevId} createRecord={createRecord} />

@@ -1,9 +1,7 @@
 {
-  "foodRecordTitle": "Food Record",
-  "calories": "Calories",
-  "protein": "Protein",
-  "carbs": "Carbohydrates",
-  "fat": "Fat",
+  "userPreferences": "User Preferences",
+  "dietPreferences": "Diet Preferences",
+  "mealsPerDay": "Meals Per Day",
   "meal-1": "Breakfast",
   "meal-2": "Morning Snack",
   "meal-3": "Lunch",

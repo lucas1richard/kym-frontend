@@ -13,6 +13,7 @@ const fetchFoodRecordsThunk = createAsyncThunk(
 
       let data: FoodRecord<{ withMacros: true }>[] = [];
       if (res.ok) data = await res.json();
+
       return { ok: res.ok, data, date };
     }
 );

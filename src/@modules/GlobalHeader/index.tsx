@@ -44,6 +44,7 @@ const GlobalHeader = () => {
         <FlexWrapper gap="1rem" justify="flex-start">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
+          <NavLink to="/preferences">Preferences</NavLink>
           <NavLink to="/about">About</NavLink>
         </FlexWrapper>
       </nav>

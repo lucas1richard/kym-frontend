@@ -3,10 +3,6 @@ import type { Abbrev } from '@typedefs';
 import fetchAbbrevsThunk from './thunks/fetchAbbrevsThunk';
 import fetchFoodRecordsThunk from '@modules/FoodRecord/ducks/thunks/fetchFoodRecordsThunk';
 
-interface AbbrevState {
-  [key: number]: Abbrev<{ withWeight: true }>;
-}
-
 export const abbrevAdapter = createEntityAdapter<Abbrev<{ withWeight: true }>>({
   selectId: (abbrev) => abbrev.id,
   sortComparer: (a, b) => a.id - b.id,

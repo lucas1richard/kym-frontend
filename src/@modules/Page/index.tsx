@@ -9,6 +9,7 @@ type KymPageProps = JSX.IntrinsicElements['div']
 
 const StyledMain = styled.main`
   padding: 2rem;
+  min-height: calc(100vh);
   ${({ theme }) => theme.breakpoints.down('md')} {
     padding: 1rem;
   }
