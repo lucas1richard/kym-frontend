@@ -1,5 +1,6 @@
 {
   "foodRecordTitle": "Food Record",
+  "foodRecordLoadError": "Couldn't get food records",
   "calories": "Calories",
   "protein": "Protein",
   "carbs": "Carbohydrates",

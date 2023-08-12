@@ -75,14 +75,17 @@ export const TabTitle: TabTitleType = ({
       ref={titleRef}
       tabIndex={isActive ? 0 : -1}
       onClick={() => setActiveIx(ix)}
-      onKeyDown={(ev) => onKeyPressHandler({
-        ix,
-        headerRef,
-        key: ev.key,
-        numTabs,
-        setActiveIx,
-        titleRef,
-      })}
+      onKeyDown={(ev) => {
+        ev.preventDefault();
+        onKeyPressHandler({
+          ix,
+          headerRef,
+          key: ev.key,
+          numTabs,
+          setActiveIx,
+          titleRef,
+        });
+      }}
       className={`${className} ${isActive ? activeClassName : ""}`}
       role="tab"
       type="button"

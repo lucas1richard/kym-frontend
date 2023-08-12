@@ -47,6 +47,14 @@ export const foodRecordSlice = createSlice({
         loadStatus: 'succeeded',
       };
     });
+    builder.addCase(fetchFoodRecordsThunk.rejected, (state, action) => {
+      const { meta: { arg } } = action;
+      const { date } = arg;
+      state.record[date] = {
+        ...state.record[date],
+        loadStatus: 'rejected',
+      };
+    });
     builder.addCase(fetchFoodRecordsThunk.pending, (state, action) => {
       const { meta: { arg } } = action;
       const { date } = arg;

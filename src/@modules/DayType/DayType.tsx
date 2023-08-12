@@ -13,7 +13,24 @@ const DayType = () => {
   const handleClick = () => {
     dispatch(setDayTypeThunk({ date: appDate, isTraining: !isTraining }))
   };
-  if (loadStatus === 'pending') return <LoadingIndicator />
+  if (loadStatus === 'pending') return <LoadingIndicator />;
+  if (loadStatus === 'rejected') return (
+    <div>
+      <Typography
+        align="center"
+        variant="h4"
+        component="h2"
+        intlId="dayTypeTitle"
+      />
+      <Typography
+        align="center"
+        variant="h6"
+        component="h3"
+        color="error"
+        intlId="dayTypeLoadError"
+      />
+    </div>
+  );
   return (
     <div style={{ textAlign: 'center'}}>
       <Typography

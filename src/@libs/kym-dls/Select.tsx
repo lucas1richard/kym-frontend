@@ -13,6 +13,11 @@ const OutlinedCss = css<SelectProps>`
   color: ${({ theme, color = 'default' }) => theme.palette[color].main};
   background: transparent;
   box-shadow: ${({ theme }) => theme.shadows[2]};
+  @media (prefers-color-scheme: dark) {
+    ${({ color = 'default', theme }) => {
+      return `color: ${theme.palette[color].light};`;
+    }
+  }
 `;
 const FilledCss = css<SelectProps>`
   border-color: ${({ theme, color = 'default' }) => theme.palette[color].dark};

@@ -42,12 +42,28 @@ export const dayType = createSlice({
         ...payload.data,
       };
     });
+    builder.addCase(fetchTrainingDays.rejected, (state, action) => {
+      return {
+        ...state,
+        [dayjs().format('YYYY-MM-DD')]: {
+          ...state[dayjs().format('YYYY-MM-DD')],
+          loadStatus: 'rejected'
+        },
+      };
+    });
     builder.addCase(setDayTypeThunk.pending, (state, action) => {
       const { meta } = action;
       const { arg } = meta;
       if (!arg) return state;
       if (!state[arg.date]) state[arg.date] = { loadStatus: 'pending', isTraining: false };
       state[arg.date] = { ...state[arg.date], loadStatus: 'pending' };
+    });
+    builder.addCase(setDayTypeThunk.rejected, (state, action) => {
+      const { meta } = action;
+      const { arg } = meta;
+      if (!arg) return state;
+      if (!state[arg.date]) state[arg.date] = { loadStatus: 'rejected', isTraining: false };
+      state[arg.date] = { ...state[arg.date], loadStatus: 'rejected' };
     });
     builder.addCase(setDayTypeThunk.fulfilled, (state, action: PayloadAction<{ ok: boolean; data: DayTypeState }>) => {
       const { payload } = action;

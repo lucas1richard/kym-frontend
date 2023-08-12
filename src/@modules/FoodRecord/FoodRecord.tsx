@@ -26,6 +26,15 @@ const FoodRecord = () => {
   return (
     <div>
       <Typography intlId="foodRecordTitle" variant="h4" component="h2" />
+      {loadStatus === 'rejected' && (
+        <Typography
+          align="center"
+          variant="h6"
+          component="h3"
+          color="error"
+          intlId="foodRecordLoadError"
+        />
+      )}
       {loadStatus === 'pending'
         ? <LoadingIndicator />
         : Object.entries(groupedRecords).map(([meal, records]) => {

@@ -52,6 +52,11 @@ const InputField = styled.input<InputProps>`
     if (variant === 'filled') return FilledCss;
     return '';
   }}
+  @media (prefers-color-scheme: dark) {
+    ${({ color = 'default', theme }) => {
+      return `color: ${theme.palette[color].light};`;
+    }
+  }
 `;
 
 const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
