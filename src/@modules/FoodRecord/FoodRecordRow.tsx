@@ -1,6 +1,7 @@
 import { getAbbrev } from '@ducks/abbrev/selectors';
-import { useAppSelector } from '@ducks/hooks';
-import { Accordion, SrOnly, Typography } from '@libs/kym-dls';
+import { useAppDispatch, useAppSelector } from '@ducks/hooks';
+import { Accordion, Button, SrOnly, Typography } from '@libs/kym-dls';
+import deleteFoodRecordThunk from '@modules/FoodRecordAdder/ducks/thunks/deleteFoodRecordThunk';
 import { FoodRecord } from '@typedefs';
 
 type FoodRecordRowProps = {
@@ -10,7 +11,10 @@ type FoodRecordRowProps = {
 
 const FoodRecordRow: React.FC<FoodRecordRowProps> = ({ record, abbrevId }) => {
   const abbrev = useAppSelector((state) => getAbbrev(state, abbrevId));
-
+  const dispatch = useAppDispatch();
+  const deleteRecord = () => {
+    dispatch(deleteFoodRecordThunk({ date: record.date, ids: [record.id] }));
+  };
   return (
     <Accordion.Section>
       <Accordion.SectionHeader>
@@ -36,6 +40,9 @@ const FoodRecordRow: React.FC<FoodRecordRowProps> = ({ record, abbrevId }) => {
         <Typography>
           <Typography intlId="fat" component="span" />: {record.fat}
         </Typography>
+        <Button variant="outlined" color="secondary" onClick={deleteRecord}>
+          <Typography intlId="deleteRecord" color="inherit" />
+        </Button>
       </Accordion.SectionContent>
     </Accordion.Section>
   )

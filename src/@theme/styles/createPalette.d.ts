@@ -1,3 +1,4 @@
+import { dark } from './createPalette.d';
 import { Color, PaletteType } from '..';
 import { CommonColors } from '../colors/common';
 
@@ -22,6 +23,7 @@ export interface TypeAction {
 export interface TypeBackground {
   default: string;
   paper: string;
+  dark: string;
 }
 
 export type TypeDivider = string;

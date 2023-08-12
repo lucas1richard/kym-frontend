@@ -9,5 +9,6 @@
   "meal-3": "Lunch",
   "meal-4": "Afternoon Snack",
   "meal-5": "Dinner",
-  "meal-6": "Evening Snack"
+  "meal-6": "Evening Snack",
+  "deleteRecord": "Delete Record"
 }

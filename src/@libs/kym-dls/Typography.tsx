@@ -109,6 +109,12 @@ const Typography = styled<ComponentType<TypographyProps & JSX.IntrinsicElements[
     if (color === 'inherit') return 'color: inherit;';
     return `color: ${theme.palette[color].main};`;
   }}
+  @media (prefers-color-scheme: dark) {
+    ${({ color = 'default', theme }) => {
+      if (color === 'inherit') return 'color: inherit;';
+      return `color: ${theme.palette[color].light};`;
+    }
+  }
 `;
 
 export default Typography;
