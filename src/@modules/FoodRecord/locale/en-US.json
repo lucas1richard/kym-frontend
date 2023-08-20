@@ -11,5 +11,7 @@
   "meal-4": "Afternoon Snack",
   "meal-5": "Dinner",
   "meal-6": "Evening Snack",
-  "deleteRecord": "Delete Record"
+  "deleteRecord": "Delete Record",
+  "editRecord": "Edit Record",
+  "updateRecord": "Update Record"
 }

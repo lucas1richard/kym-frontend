@@ -11,7 +11,7 @@ type SelectProps = {
 const OutlinedCss = css<SelectProps>`
   border-color: ${({ theme, color = 'default' }) => theme.palette[color].main};
   color: ${({ theme, color = 'default' }) => theme.palette[color].main};
-  background: transparent;
+  background: inherit;
   box-shadow: ${({ theme }) => theme.shadows[2]};
   @media (prefers-color-scheme: dark) {
     ${({ color = 'default', theme }) => {
@@ -19,6 +19,7 @@ const OutlinedCss = css<SelectProps>`
     }
   }
 `;
+
 const FilledCss = css<SelectProps>`
   border-color: ${({ theme, color = 'default' }) => theme.palette[color].dark};
   color: ${({ theme, color = 'default' }) => theme.palette[color].contrastText};
@@ -39,7 +40,7 @@ const Select = styled.select<SelectProps>`
   cursor: pointer;
   position: relative;
   padding: 8px;
-  background: transparent;
+  background: inherit;
   
   ${({ fullWidth }) => fullWidth ? 'width: 100%;' : ''}
   ${({ variant = 'outlined' }) => {

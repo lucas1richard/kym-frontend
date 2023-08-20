@@ -5,6 +5,7 @@ export type FoodRecord<B = {}> = {
   meal: number;
   quantity: number;
   unit: number;
+  seq: number;
   fromprogram: boolean;
   confirmed: boolean;
   user_uuid: string;

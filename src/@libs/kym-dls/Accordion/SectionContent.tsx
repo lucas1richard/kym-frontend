@@ -1,4 +1,4 @@
-import { PropsWithChildren, useRef } from 'react';
+import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 const StyledSection = styled.div`
@@ -11,25 +11,35 @@ const StyledSection = styled.div`
 export type AccordionSectionContentProps = PropsWithChildren<{
   isCollapsed?: boolean;
   contentId?: string;
+  updateMaxHeight?: any;
+  children?: React.ReactNode | (({}: { isCollapsed?: boolean }) => Element);
 }>;
 export const AccordionSectionContent: React.FC<AccordionSectionContentProps> = ({
   children,
   isCollapsed,
   contentId,
+  updateMaxHeight,
   ...rest
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  
+  const [maxHeight, setMaxHeight] = useState(ref?.current?.scrollHeight ?? 0);
+
+  useEffect(() => {
+    setMaxHeight(ref?.current?.scrollHeight ?? 0);
+  }, [updateMaxHeight, ref]);
+
   return (
     <StyledSection
       id={contentId}
       ref={ref}
       aria-hidden={isCollapsed}
       style={{
-        maxHeight: isCollapsed ? "0px" : ref?.current?.scrollHeight ?? 0 + "px"
+        maxHeight: isCollapsed ? "0px" : maxHeight ?? 0 + "px"
       }}
       {...rest}
     >
-      {children}
+        {children}
     </StyledSection>
   );
 };
